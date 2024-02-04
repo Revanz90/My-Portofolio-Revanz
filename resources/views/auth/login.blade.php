@@ -35,6 +35,9 @@
                             </div>
 
                             <div class="card-body">
+                                @if (session('status'))
+                                    <p class="text-success">{{ session('status') }}</p>
+                                @endif
                                 <form method="POST" action="{{ route('login') }}" class="needs-validation"
                                     novalidate="">
                                     @csrf
